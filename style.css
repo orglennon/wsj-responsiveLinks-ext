@@ -1,0 +1,208 @@
+/*rescoped responsivegrid.css
+from https://github.dowjones.net/KendallJoseph/intention/blob/master/lib/assets/responsivegrid.css
+*/
+/* global */
+body.intentions {
+	margin: 0;
+}
+
+/* end global */
+/* module styles */
+.intentions .module {
+	min-height: 150px;
+	display: block;
+	overflow: hidden;
+}
+
+.intentions .module:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+.intentions .module:before,
+.intentions .module:after,
+.intentions .column:before,
+.intentions .column:after,
+.intentions .colgroup:before,
+.intentions .colgroup:after {
+	content: "";
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+
+.intentions .module:after, 
+.intentions .column:after, 
+.intentions .colgroup:after {
+	clear: both;
+}
+
+/* end module styles */
+/* component styles */
+/* end component styles */
+/* grid */
+.intentions .column {
+	float: left;
+	margin-left: 1.15%;
+	/* Margin in a 10-col  */
+}
+
+.intentions .column:first-child {
+	margin-left: 0 !important;
+}
+
+.intentions .column + .column:last-child {
+	float: right; /* <- makes alignment look neater */
+	margin-left: 0 !important; /* <- reduces likelihood of inadvertent wrapping */
+}
+
+.intentions .col10wide {
+	width: 100%;
+}
+
+.intentions .col9wide {
+	width: 89.9%;
+}
+
+.intentions .col8wide {
+	width: 79.7%;
+}
+
+.intentions .col7wide {
+	width: 69.6%;
+}
+
+.intentions .col6wide {
+	width: 59.54%;
+}
+
+.intentions .col5wide {
+	width: 49.4%;
+}
+
+.intentions .col4wide {
+	width: 39.3%;
+}
+
+.intentions .col3wide {
+	width: 29.17%;
+}
+
+.intentions .col2wide {
+	width: 19.06%;
+}
+
+.intentions .col1wide {
+	width: 8.96%;
+}
+
+.intentions .placeholder {
+	display: none !important;
+}
+
+/* Inside a col6wide */
+.intentions .col6wide .colgroup > .col3wide {
+	width: 49.1%;
+}
+
+.intentions .col6wide .colgroup > .col2wide {
+	width: 32%;
+}
+
+.intentions .col6wide .colgroup > .column {
+	margin-left: 2%; /* <- This value is larger than it should be. */
+}
+
+/* Inside a col4wide */
+.intentions .col4wide .colgroup > .col2wide {
+	width: 48.54%;
+}
+
+.intentions .col4wide .colgroup > .column {
+	margin-left: 2.92%; 
+}
+
+.intentions .col3wide .column.col3wide {
+	margin-left: 0 !important; /* <- No column margins in phone view */
+}
+
+/* reset nested columns */
+.intentions .col1wide > .col1wide,
+.intentions .col2wide > .col2wide,
+.intentions .col3wide > .col3wide,
+.intentions .col4wide > .col4wide,
+.intentions .col5wide > .col5wide,
+.intentions .col6wide > .col6wide,
+.intentions .col7wide > .col7wide,
+.intentions .col8wide > .col8wide,
+.intentions .col9wide > .col9wide,
+.intentions .col10wide > .col10wide,
+.intentions .col11wide > .col11wide,
+.intentions .col12wide > .col12wide,
+.intentions .col13wide > .col13wide,
+.intentions .col14wide > .col14wide,
+.intentions .col2wide > .colgroup > .col2wide,
+.intentions .col3wide > .colgroup > .col3wide,
+.intentions .col4wide > .colgroup > .col4wide,
+.intentions .col6wide > .colgroup > .col6wide {
+	width: 100%;
+}
+
+/* handle non-10-col-based contexts */
+.intentions.luxury .col14wide,
+.tablet .col6wide,
+.mobile .col3wide {
+	width: 100%;
+}
+
+
+/* new stuff not in responsivegrid.css */
+.intentions .contentwide {
+	width:100%;
+}
+
+.intentions .margin-left {
+	margin-left:2%;
+}
+
+.intentions .col6wide .col6wide {
+	width:100%;
+}
+
+.intentions .col6wide .col3wide {
+	width:49%;
+}
+
+.intentions .col6wide .col4wide {
+	width:65%;
+}
+
+.intentions .col6wide .col2wide {
+	width: 32%;
+}
+
+.intentions .col6wide.column + .col3wide {
+	clear:left;
+}
+
+.intentions .fullwide.pagewide {
+	min-width:auto;
+}
+
+.intentions .newsImage-C .imageFormat-C {
+	width:100% !important;
+	height:auto !important;
+}
+
+/* intentions control */
+#intentionsControl{
+	width:100px;
+	height:100px;
+	background-color:green;
+	position:fixed;
+	top:0;
+	right:0;
+}
+
+#intentionsControl.intentionsActive {
+	background-color:red;
+}

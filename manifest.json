@@ -1,0 +1,13 @@
+{
+  "name": "WSJ Responsive Article Redirect",
+  "description": "Redirects all wsj articles to the responsive test page",
+  "version": "0.0.1",  
+  "content_scripts": [
+    {
+      "matches": ["http://*.wsj.com/*","https://*.wsj.com/*"],
+      "css": ["style.css"],
+      "js": ["jquery.js", "script.js"]
+    }
+  ],
+  "manifest_version": 2  
+}
