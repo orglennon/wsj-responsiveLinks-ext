@@ -6,7 +6,10 @@ $(document).ready(function(){
 		$(this).css('cursor','pointer');
 	});
 
-	// window.localStorage.setItem('responsiveLinks', 0);
+	var initialValue = window.localStorage.getItem('responsiveLinks');
+	if(initialValue === null){
+		window.localStorage.setItem('responsiveLinks', 0);
+	};
 
 	
 	var rewriteLinks = function(){
